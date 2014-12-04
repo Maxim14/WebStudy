@@ -9,14 +9,14 @@ class autosalon
 
   public function GetInfo()
   {
-  print(name);
-  print(adress);
-  print(phone);
+  	fioinfo =  this.name + " " +this.adress+ " "+this.phone;
+  	return fioinfo;
   }
 
   public function GetNumberOfCar()
   {
-    count = get(AllNumberOfCar);
+    count = get(this.AllNumberOfCar);
+    return count;
   }
 }   
 
@@ -30,102 +30,146 @@ abstract class car
  protected place;
  protected classauto;
  protected photo;
+ protected test = false;
 
-public function getName()
+public function getInfo()
   {
-  print(name+" "mark+" "classauto+" "+place+" "year)
+  infostr = this.name+" "this.mark+" "this.classauto+" "+this.place+" "this.year;
+  return infostr;
   }
 
-public function getPrice()
+ public function getPrice()
   {
-  print("price")
+  return this.price
   }
  
   public function ViewPhoto()
   {
-    print(photo);
+    print(this.photo);
   }
 }
 
 class NewCar extends car
 {
-  public SellingPlace;
-  public Garanty;
+  protected SellingPlace;
+  protected Garanty;
 
   public function WiewGaranty()
   {
-    Garanty = year + 10;
+    this.Garanty = this.year + 10;
+    return this.Gatanty;
   }
 
   public function GetSellingPlace()
   {
-    SellingPlace = place.autosalon -> adress;  
+    this.SellingPlace = place.autosalon -> adress;  
+    return this.SellingPlace;
   }
 }
 
 class NewProfienceCar extends NewCar
 {
-  public ProdutctionZone;
-  public Specialization;
-  public Weight;
+  protected ProdutctionZone;
+  protected Specialization;
+  protected Weight;
+  protected SpecilizationInfo;
 
 public function GetSpecialization()
 {
-  print(Specialization + Production);
+  this.SpecilizationInfo = this.Specialization + " "+this.Production;
 }
 }
 
 class UsedCar extends car
 {
-  public Roading;
-  public FirstPrice;
-  public RepairNumber;
-  public SellerPhone;
+  protected Roading;
+  protected FirstPrice;
+  protected RepairNumber;
+  protected SellerPhone;
 
 public function GetOldPrice()
 {
-  print(FirstPrice);
+  return this.FirstPrice;
 }
 
 public function GetSellingPrice()
 {
   SellingPrice = price + 0.5*price;
+  return SellingPrice;
 }
 }
 
 class UsedProfienceCar extends NewProfienceCar
 {
-  public Roading;
-  public FirstPrice;
-  public RepairNumber;
-  public SellerPhone;
+  protected Roading;
+  protected FirstPrice;
+  protected RepairNumber;
+  protected SellerPhone;
 
 public function GetOldPrice()
 {
-  print(FirstPrice);
+  return this.FirstPrice;
 }
 
 public function GetSellingPrice()
 {
-  SellingPrice = price + 0.5*price;
+  this.SellingPrice = this.price + 0.5*price;
+  return this.SellingPrice;
 }
 }
 
 class Client
 {
-  public number;
-  public FIO;
-  public phone;
-  public GetautoservInfo;
-  public BuyingCarNumber;
+  protected number;
+  protected FIO;
+  protected phone;
+  protected id[];
+  protected countprot = 0;
+  protected str;
 
-function GetClientInfo()
+public function GetClientInfo()
 {
-  print(number+""+FIO+" "+phone+" "+GetautoservInfo)
+  return this.number+""+this.FIO+" "+this.phone+" "+this.GetautoservInfo)
 }
 
-function GetBuyingCarNumber()
+public function GetProtocolID()
 {
-  BuyingCarNumber= car -> number;
+  this.id[countprot]= this.protocol -> this.number;
+  return this.id[countprot];
+  this.countprot++;
+
+}     
 }
+
+class protocol
+{
+protected protocol;
+protected GetautoservInfo;
+protected BuyingCarNumber;
+protected Cost;
+protected Time;
+
+public function GetBuyingCarNumber()
+{
+  this.BuyingCarNumber= car.GetInfo();
+  return this.BuyingCarNumber;
+}
+
+public function GetSellingCarNumber()
+{
+  this.SellingCarNumber= car.GetInfo();;
+  return this.SellingCarNumber;
+}
+
+public function TestDrive()
+{
+  this.test = true;
+}
+
+public function RepairPrice()
+{
+ this.Cost = car -> price; * 0.5 + price;
+ return this.Cost;
+}
+
 }

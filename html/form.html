@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="1.css">
     <title>Forma</title>
 </head>
 <body>
@@ -12,9 +13,10 @@
 <p>  Praesent tristique convallis molestie. Aliquam fermentum viverra orci, egestas maximus turpis luctus sed. Cras ac ante et massa iaculis placerat in non velit. Pellentesque et vulputate sapien, eget ornare ipsum. Morbi mattis magna vehicula, suscipit ligula quis, suscipit nulla. Etiam vitae pellentesque dui. Duis semper leo eget elit scelerisque consectetur volutpat vel metus. </p>
 
 <p> Etiam cursus consectetur purus eu vehicula. Etiam vulputate, lacus pellentesque ultrices porta, risus lectus iaculis eros, sed rhoncus augue lectus vitae orci. Suspendisse id erat ornare, laoreet lacus nec, tempor mauris. Donec sem arcu, vulputate ut orci quis, pharetra sollicitudin lorem. Cras turpis quam, varius id eros at, porttitor semper mi. Ut vehicula dui nec placerat posuere. Curabitur eget enim vel arcu venenatis finibus in fermentum nisl. Maecenas vehicula fringilla nisl, ut commodo erat tempus eget. Sed consectetur erat et mi ornare, vitae sollicitudin arcu ullamcorper. </p> 
-<h2> Ты нам нужен </h2>
-<h3> Регистрация </h3>
+<h2> <marquee>  Ты нам нужен  Ты нам нужен  Ты нам нужен  Ты нам нужен  Ты нам нужен  Ты нам нужен  Ты нам нужен </marquee> </h2>
    </div>
+  <h3> Регистрация </h3>
+  <input type="checkbox" id="rem" name="remember" value="a6" >Запомни меня<Br> 
   <div class="wrap">
     <div class="item">
       <label for="name">Имя</label>
@@ -26,7 +28,7 @@
       <input type="text" id="surname" required>
       <span></span>
     </div>
-    <p><select size="10" multiple name="city[]">
+    <p><select size="5" multiple name="city[]">
     <option disabled>Выберите город</option>
     <option value="Киев">Киев</option>
     <option selected value="Мариуполь">Мариуполь</option>
@@ -65,8 +67,7 @@
    </form>
   </div>
   <footer>
-  <input type="checkbox" name="remember" value="a6">Запомни меня<Br> 
-   <p><input type="submit" value="Отправить"></p>
+   <p><input type="submit" id="button" value="Отправить"></p>
   </footer>
 </body>
 </html>
